@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .img-box {
+      width: 90px;
+      height: 90px;
+    }
+
+    .img-box-a {
+      width: 100px;
+      height: 100px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <img class="img" style="display: none; color:aliceblue;" id="imgA"
+    origin-src="https://user-images.githubusercontent.com/8925282/60961121-034a1f80-a33e-11e9-9229-b987d3461d45.png" />
+  <div class="img-box">
+    <img id="imgB"
+      origin-src="https://user-images.githubusercontent.com/8925282/60961182-27a5fc00-a33e-11e9-8317-8e4fefbfa9c2.png" />
+  </div>
+</body>
+<script src="./dist/img-lazy-processor.js"></script>
+<script>
+  // eslint-disable-next-line no-undef
+  let imgHandle = new ImgLazyProcessor({
+    dataset: true,
+    bgColor: '#aec2d3',
+  })
+  imgHandle.observe(document.getElementById('imgA'), {
+    delay: true,
+  })
+  imgHandle.observe(document.getElementById('imgB'), {
+    delay: true,
+  })
+
+</script>
+
+</html>
