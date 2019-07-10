@@ -5,16 +5,19 @@
 ## Usage
 
 ### Lint File
+
 ```bash
 yarn lint
 ```
 
 ### Test File
+
 ```bash
 yarn test
 ```
 
 ### Build File
+
 ```bash
 yarn build
 ```
