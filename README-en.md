@@ -16,6 +16,12 @@ yarn add img-lazy-processor
   <script src="${path}/img-lazy-processor.min.js"></script>
 ```
 
+> Using a module loader
+
+```js
+import ImgLazyProcessor from 'img-lazy-processor'
+```
+
 ```js
 
 /*  html
@@ -23,7 +29,7 @@ yarn add img-lazy-processor
   <img id="target" origin-src="src" />
   ...
 */
-> Using a module loader
+
 // js
 import ImgLazyProcessor from 'img-lazy-processor'
 let elem = document.getElementById('target')
