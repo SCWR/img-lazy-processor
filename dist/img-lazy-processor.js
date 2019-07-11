@@ -1,6 +1,6 @@
 /*!
  * img-lazy-processor.js v0.0.1
- * (c) 2019-2019 SCWR <dl_run@qq.com>
+ * (c) 2019-2019 [object Object]
  * https://github.com/SCWR/img-lazy-processor.git
  * Released under the MIT License.
  */
@@ -441,8 +441,10 @@
         bgSize: '50%',
         bgPosition: 'center',
         bgRepeat: 'no-repeat',
+        sizeLimit: 2,
+        delay: false,
         delayTime: 300,
-        sizeLimit: 2
+        disable: false
       }, commonOption);
       this._mutationOptions = {
         attributes: true,
@@ -461,6 +463,10 @@
 
         if (!(imgEl instanceof HTMLElement) || imgEl.tagName !== 'IMG' || elemOption) {
           return;
+        }
+
+        if (!imgEl.src) {
+          imgEl.setAttribute('src', PLACEHOLD_IMG);
         }
 
         imgEl._init = false;
