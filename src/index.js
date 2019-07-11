@@ -228,8 +228,10 @@ class ImgLazyProcessor {
       bgSize: '50%',
       bgPosition: 'center',
       bgRepeat: 'no-repeat',
-      delayTime: 300,
       sizeLimit: 2,
+      delay: false,
+      delayTime: 300,
+      disable: false,
       ...commonOption,
     }
     this._mutationOptions = {
@@ -303,6 +305,9 @@ class ImgLazyProcessor {
     let elemOption = this._elemOptions.get(imgEl)
     if (!(imgEl instanceof HTMLElement) || imgEl.tagName !== 'IMG' || elemOption) {
       return
+    }
+    if (!imgEl.src) {
+      imgEl.setAttribute('src', PLACEHOLD_IMG)
     }
     imgEl._init = false
     imgEl._reset = true

@@ -36,14 +36,14 @@
 <script src="./dist/img-lazy-processor.js"></script>
 <script>
   // eslint-disable-next-line no-undef
-  let imgHandle = new ImgLazyProcessor({
+  let imgLazyProcessor = new ImgLazyProcessor({
     dataset: true,
     bgColor: '#aec2d3',
   })
-  imgHandle.observe(document.getElementById('imgA'), {
+  imgLazyProcessor.observe(document.getElementById('imgA'), {
     delay: true,
   })
-  imgHandle.observe(document.getElementById('imgB'), {
+  imgLazyProcessor.observe(document.getElementById('imgB'), {
     delay: true,
   })
 

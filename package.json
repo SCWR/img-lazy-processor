@@ -7,7 +7,8 @@
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "build": "yarn run build:dev && yarn run build:prod",
     "test": "yarn run lint && yarn run build",
-    "lint": "yarn eslint src/**/*.js test/**/*.js --fix"
+    "lint": "yarn eslint src/**/*.js test/**/*.js --fix",
+    "prepublishOnly": "yarn run build"
   },
   "main": "dist/img-lazy-processor.common.js",
   "module": "dist/img-lazy-processor.esm.js",
@@ -67,6 +68,7 @@
     "node": ">= 6.0.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "vue-directive"
   ]
 }
