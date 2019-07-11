@@ -1,5 +1,5 @@
 /*!
- * img-lazy-processor.js v0.0.1
+ * img-lazy-processor.js v0.1.0
  * (c) 2019-2019 [object Object]
  * https://github.com/SCWR/img-lazy-processor.git
  * Released under the MIT License.

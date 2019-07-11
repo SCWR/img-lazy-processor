@@ -73,6 +73,9 @@ let imgLazyProcessor = new ImgLazyProcessor({
     //局部设置, 具体参考全局设置
   })
 
+  // 重新设置img元素局部设置
+  imgLazyProcessor.setElemOption(elem, option)
+
   // 取消观察img元素
   imgLazyProcessor.unobserve(elem)
 

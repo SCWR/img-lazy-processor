@@ -23,7 +23,7 @@
  *}, '')
  *
  */
-import ImgLazyProcessor from '../src/index.js'
+import ImgLazyProcessor from '../dist/img-lazy-processor.esm.js'
 
 const imgLazyProcessor = new ImgLazyProcessor({ dataset: true })
 

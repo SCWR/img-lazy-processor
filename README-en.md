@@ -35,7 +35,7 @@ import ImgLazyProcessor from 'img-lazy-processor'
 let elem = document.getElementById('target')
 
 let imgLazyProcessor = new ImgLazyProcessor({
-    //global setting
+    //global settings
 
     // whether to record the status in the dataset
     dataset: true,
@@ -68,8 +68,11 @@ let imgLazyProcessor = new ImgLazyProcessor({
 
   // observe img element
   imgLazyProcessor.observe(elem, {
-    //local setting, specific reference to global settings
+    //local settings, specific reference to global settings
   })
+
+  // Reset the img element local settings
+  imgLazyProcessor.setElemOption(elem, option)
 
   // unobserve img element
   imgLazyProcessor.unobserve(elem)
