@@ -18,7 +18,7 @@ yarn add img-lazy-processor
   <script src="${path}/img-lazy-processor.min.js"></script>
 ```
 
-> Using a module loader
+> 使用模块加载
 
 ```js
 import ImgLazyProcessor from 'img-lazy-processor'
