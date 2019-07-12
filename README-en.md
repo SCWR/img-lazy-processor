@@ -4,6 +4,10 @@
 > Because the Mutation Observer and Intersection Observer requires compatibility, the Mutation Observer can reference the [intersection-observer](https://www.npmjs.com/package/intersection-observer).
 > Or add the polyfill [polyfill/intersection-observer.js](./polyfill/intersection-observer.js) modified in this project.
 
+```js
+ import 'img-lazy-processor/polyfill/intersection-observer.js'
+```
+
 ## Usage
 
 ```bash

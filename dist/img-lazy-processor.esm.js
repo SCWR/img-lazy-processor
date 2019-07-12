@@ -1,5 +1,5 @@
 /*!
- * img-lazy-processor.js v0.1.1
+ * img-lazy-processor.js v0.1.2
  * (c) 2019-2019 [object Object]
  * https://github.com/SCWR/img-lazy-processor.git
  * Released under the MIT License.
@@ -555,9 +555,9 @@ function () {
       var style = imgEl.getAttribute('style');
       var tempStyle = tempElem.getAttribute('style');
 
-      if (style !== tempStyle) {
+      if (style !== tempStyle && tempStyle) {
         imgEl._inside += 1;
-        imgEl.setAttribute('style', tempElem.getAttribute('style'));
+        imgEl.setAttribute('style', tempStyle);
       }
     }
   }, {

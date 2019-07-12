@@ -20,7 +20,7 @@
   if ('IntersectionObserver' in window &&
       'IntersectionObserverEntry' in window &&
       'intersectionRatio' in window.IntersectionObserverEntry.prototype
-      && ('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
+      && 'isIntersecting' in window.IntersectionObserverEntry.prototype) {
 
     // Minimal polyfill for Edge 15's lack of `isIntersecting`
     // See: https://github.com/w3c/IntersectionObserver/issues/211
@@ -714,14 +714,20 @@
   Object.defineProperty(window.IntersectionObserverEntry.prototype,
     'intersectionRatio', {
     get: function () {
-      return this.intersectionRatio;
+      return this._$_intersectionRatio;
+    },
+    set: function(value) {
+      this._$_intersectionRatio = value;
     }
   })
 
   Object.defineProperty(window.IntersectionObserverEntry.prototype,
     'isIntersecting', {
     get: function () {
-      return this.intersectionRatio > 0;
+      return this._$_isIntersecting;
+    },
+    set: function(value) {
+      this._$_isIntersecting = value;
     }
   })
 
