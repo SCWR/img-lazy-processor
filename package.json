@@ -1,6 +1,6 @@
 {
   "name": "img-lazy-processor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Through the modern browser Observer API of Mutation Observer and Intersection Observer, lazy loading of img tags and friendly prompts for empty addresses or loading failures",
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development rollup -c",
@@ -36,9 +36,9 @@
   },
   "homepage": "https://github.com/SCWR/img-lazy-processor#readme",
   "dependencies": {
-    "intersection-observer": "^0.7.0"
   },
   "devDependencies": {
+    "intersection-observer": "^0.7.0",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -69,6 +69,7 @@
   },
   "files": [
     "dist",
-    "vue-directive"
+    "vue-directive",
+    "polyfill"
   ]
 }

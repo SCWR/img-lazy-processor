@@ -1,5 +1,5 @@
 /*!
- * img-lazy-processor.js v0.1.0
+ * img-lazy-processor.js v0.1.1
  * (c) 2019-2019 [object Object]
  * https://github.com/SCWR/img-lazy-processor.git
  * Released under the MIT License.
@@ -143,7 +143,7 @@ function _nonIterableRest() {
     return;
   }
 
-  throw TypeError('The browser does not support the IntersectionObserver API. You can add polyfill(https://github.com/w3c/IntersectionObserver) or [npm install intersection-observer] to solve this problem');
+  console.warn && console.warn('The browser does not support the IntersectionObserver API. You can add polyfill(https://github.com/w3c/IntersectionObserver) or [npm install intersection-observer] to solve this problem' + 'or add (polyfill/intersection-observer.js) in this project ');
 })();
 
 var PLACEHOLD_IMG = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ1RDk3QjBCQTUyQzExRThCQ0U4OEMxMDBGQTgwMkNDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ1RDk3QjBDQTUyQzExRThCQ0U4OEMxMDBGQTgwMkNDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDVEOTdCMDlBNTJDMTFFOEJDRTg4QzEwMEZBODAyQ0MiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDVEOTdCMEFBNTJDMTFFOEJDRTg4QzEwMEZBODAyQ0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7vHKjlAAAAEElEQVR42mL4//8/A0CAAQAI/AL+26JNFgAAAABJRU5ErkJggg==';

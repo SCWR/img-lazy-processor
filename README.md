@@ -4,6 +4,7 @@
 
 > 通过Mutation Observer和Intersection Observer的现代浏览器Observer API，懒加载img标签，同时对空地址或加载失败情况进行友好提示
 > 由于使用了Mutation Observer和Intersection Observer的现代浏览器Observer API，因此需要注意兼容性，Intersection Observer兼容性问题可以使用[intersection-observer](https://www.npmjs.com/package/intersection-observer).
+>或者添加本项目中修改过的polyfill [polyfill/intersection-observer.js](./polyfill/intersection-observer.js)
 
 ## 使用
 

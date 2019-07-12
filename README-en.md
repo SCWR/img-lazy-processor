@@ -2,6 +2,7 @@
 
 > Through the modern browser Observer API of Mutation Observer and Intersection Observer, lazy loading of img tags and friendly prompts for empty addresses or loading failures
 > Because the Mutation Observer and Intersection Observer requires compatibility, the Mutation Observer can reference the [intersection-observer](https://www.npmjs.com/package/intersection-observer).
+> Or add the polyfill [polyfill/intersection-observer.js](./polyfill/intersection-observer.js) modified in this project.
 
 ## Usage
 

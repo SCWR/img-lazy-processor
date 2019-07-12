@@ -3,7 +3,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import {terser} from 'rollup-plugin-terser'
 import babel from 'rollup-plugin-babel'
 import {version, author, repository} from './package.json'
-console.log(terser)
+
 const compress = process.env.NODE_ENV === 'production'
 
 const banner =
