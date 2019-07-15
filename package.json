@@ -1,6 +1,6 @@
 {
   "name": "img-lazy-processor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Through the modern browser Observer API of Mutation Observer and Intersection Observer, lazy loading of img tags and friendly prompts for empty addresses or loading failures",
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development rollup -c",
