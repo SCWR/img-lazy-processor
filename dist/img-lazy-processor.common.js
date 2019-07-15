@@ -1,5 +1,5 @@
 /*!
- * img-lazy-processor.js v0.1.3
+ * img-lazy-processor.js v0.1.4
  * (c) 2019-2019 [object Object]
  * https://github.com/SCWR/img-lazy-processor.git
  * Released under the MIT License.
@@ -554,10 +554,12 @@ function () {
   }, {
     key: "checkInside",
     value: function checkInside(imgEl, tempElem) {
-      var style = imgEl.getAttribute('style');
+      var style = imgEl.getAttribute('style') || '';
       var tempStyle = tempElem.getAttribute('style');
+      tempStyle = tempStyle === 'null' || !tempStyle ? '' : tempStyle;
+      style = style === 'null' || !style ? '' : style;
 
-      if (style !== tempStyle && tempStyle !== null) {
+      if (style !== tempStyle) {
         imgEl._inside += 1;
         imgEl.setAttribute('style', tempStyle);
       }

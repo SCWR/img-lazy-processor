@@ -8,6 +8,18 @@
  import 'img-lazy-processor/polyfill/intersection-observer.js'
 ```
 
+## vue directive
+
+```js
+
+  import Vue from 'vue'
+  import imgHandleInit from 'img-lazy-processor/vue-directive/imgHandle.js'
+  imgHandleInit(Vue)
+
+```
+
+Instructions can be used with reference to [./vue-directive/imgHandle.js](./vue-directive/imgHandle.js)
+
 ## Usage
 
 ```bash

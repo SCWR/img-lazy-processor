@@ -261,9 +261,11 @@ class ImgLazyProcessor {
     return tempElem
   }
   static checkInside (imgEl, tempElem) {
-    let style = imgEl.getAttribute('style')
+    let style = imgEl.getAttribute('style') || ''
     let tempStyle = tempElem.getAttribute('style')
-    if (style !== tempStyle && tempStyle !== null) {
+    tempStyle = tempStyle === 'null' || !tempStyle ? '' : tempStyle
+    style = style === 'null' || !style ? '' : style
+    if (style !== tempStyle) {
       imgEl._inside += 1
       imgEl.setAttribute('style', tempStyle)
     }
